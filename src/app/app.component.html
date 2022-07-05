@@ -1,13 +1,16 @@
 <h1>{{title}}</h1>
 <a [href]="url">click me!</a>
-<br>
+<a href="{{url}}">click me again!</a>
+<a [attr.href]="url" >click me again!</a>
 <br>
 <a>{{typein}}</a>
 <br>
-<input type="text" [(ngModel)]="typein">
+<input type="text" [(ngModel)]="typein"  >
+<input type="date" [(ngModel)]="dateA" >
+<input type="datetime-local" [(ngModel)]="dateB">
 <br>
 <app-cpta></app-cpta>
-<h3 *ngFor="let item of data">{{item.id}}{{item.name}}{{item['pre-add']}}</h3>
+<h3 *ngFor="let item of datasvc.data">{{item.id}}{{item.name | uppercase}}{{item['pre-add']}}</h3>
 <app-cptb *ngIf="boo"></app-cptb>
 <app-cptc *ngIf="!boo"></app-cptc>
 <button (click)=click($event)>$event-test</button>

@@ -8,11 +8,14 @@ import {SvcaService} from "../../svca.service";
 })
 export class CptbComponent implements OnInit {
 
+  datae =this.svca.data
   constructor(public svca: SvcaService) {
+
   }
 
   ngOnInit(): void {
     this.svca.run();
-  }
+console.log(typeof this.svca.data)
+   }
 
 }
