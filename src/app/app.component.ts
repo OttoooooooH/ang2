@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ang2';
+  title = '這個是網頁標題';
+  url = 'http://google.com';
+  typein = '';
+  boo=true;
+  data=[{"id":"1","name":"Otto","pre-add":"fff"},{"id":"2","name":"Foc","pre-add":"ggg"}]
+
+  click($event: MouseEvent) {
+    console.log($event)
+
+  }
 }
